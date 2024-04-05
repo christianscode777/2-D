@@ -1,0 +1,57 @@
+/* styles.css */
+
+/* Center the drawing area on the screen */
+#drawing-canvas-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+/* Style the drawing canvas */
+#drawing-canvas {
+  border: 2px solid black;
+}
+
+/* Style the title */
+.title {
+  text-align: center;
+  font-size: 32px; /* Increase font size for emphasis */
+  margin-bottom: 20px;
+  font-family: 'Freckle Face', cursive; /* Specify playful font */
+  color: #ff6f61; /* Set colorful font color */
+} 
+
+#landing-page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+#landing-content {
+  text-align: center;
+}
+
+#start-drawing-button {
+  margin-top: 20px;
+}
+
+/* Style the color selector */
+#color-selector {
+  margin-bottom: 10px;
+}
+
+.color-button {
+  width: 30px;
+  height: 30px;
+  border: none;
+  margin: 5px;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.color-button.clicked {
+  transform: scale(1.1); /* You can adjust the scale factor as needed */
+}

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Paper.js Drawing App</title>
+  <link rel="stylesheet" href="styles.css"> <!-- Link the CSS file -->
+</head>
+<body>
+  <div id="landing-page">
+    <div id="landing-content">
+      <h1 class="title">Canvas.Ur</h1> <!-- Title -->
+      <button id="start-drawing-button">Start Drawing</button>
+    </div>
+  </div>
+  
+  <div id="drawing-app" style="display: none;">
+    <div id="drawing-canvas-container">
+      <div id="color-selector">
+        <button class="color-button" data-color="red" style="background-color: red;"></button> 
+        <button class="color-button" data-color="blue" style="background-color: blue;"></button>
+        <button class="color-button" data-color="yellow" style="background-color: yellow;"></button>
+        <button class="color-button" data-color="black" style="background-color: black;"></button>
+      </div>
+      <canvas id="drawing-canvas"></canvas> 
+      <button id="save-button">Save Drawing</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
