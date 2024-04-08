@@ -1,5 +1,12 @@
 /* styles.css */
 
+#drawing-app {
+  display: none;
+  opacity: 0; /* Start with opacity set to 0 */
+  transition: opacity 0.5s ease; /* Add transition for opacity property */
+}
+
+
 /* Center the drawing area on the screen */
 #drawing-canvas-container {
   display: flex;
@@ -54,4 +61,26 @@
 
 .color-button.clicked {
   transform: scale(1.1); /* You can adjust the scale factor as needed */
+} 
+
+#canvas-drag-indicator {
+  position: absolute;
+  left: 20px; /* Adjust the distance from the canvas */
+  bottom: 20px; /* Adjust the distance from the bottom */
+  display: flex;
+  align-items: center;
+  font-family: 'Freckle Face', cursive; /* Specify playful font */
 }
+
+.drag-text {
+  font-size: 14px; /* Adjust font size as needed */
+}
+
+.arrow {
+  font-size: 20px; /* Adjust font size as needed */
+  transform: rotate(180deg); /* Rotate the arrow 180 degrees */
+  margin-right: 5px; /* Adjust spacing between text and arrow */
+}
+
+
+

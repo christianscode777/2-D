@@ -15,13 +15,24 @@
   </div>
   
   <div id="drawing-app" style="display: none;">
-    <div id="drawing-canvas-container">
+    <div id="drawing-canvas-container"> 
       <div id="color-selector">
-        <button class="color-button" data-color="red" style="background-color: red;"></button> 
-        <button class="color-button" data-color="blue" style="background-color: blue;"></button>
-        <button class="color-button" data-color="yellow" style="background-color: yellow;"></button>
-        <button class="color-button" data-color="black" style="background-color: black;"></button>
-      </div>
+  <button class="color-button" data-color="red" style="background-color: red;"></button> 
+  <button class="color-button" data-color="blue" style="background-color: blue;"></button>
+  <button class="color-button" data-color="yellow" style="background-color: yellow;"></button>
+  <button class="color-button" data-color="black" style="background-color: black;"></button>
+  <!-- Add more color buttons here -->
+  <button class="color-button" data-color="green" style="background-color: green;"></button>
+  <button class="color-button" data-color="orange" style="background-color: orange;"></button>
+  <button class="color-button" data-color="purple" style="background-color: purple;"></button>
+</div> 
+
+<div id="canvas-drag-indicator">
+  <span class="arrow">&#8594;</span> 
+  <span class="drag-text">drag</span>
+</div>
+
+
       <canvas id="drawing-canvas"></canvas> 
       <button id="save-button">Save Drawing</button>
     </div>
@@ -30,3 +41,4 @@
   <script src="script.js"></script>
 </body>
 </html>
+

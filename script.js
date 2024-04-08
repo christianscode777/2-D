@@ -6,6 +6,10 @@ document.addEventListener('DOMContentLoaded', function() {
   startDrawingButton.addEventListener('click', function() {
     landingPage.style.display = 'none';
     drawingApp.style.display = 'block';
+    // Adding a short delay 
+    setTimeout(function() {
+      drawingApp.style.opacity = '1';
+    }, 100);
   });
   // Set up Paper.js on the canvas element
   paper.setup('drawing-canvas');
@@ -114,3 +118,4 @@ document.addEventListener('DOMContentLoaded', function() {
   // Attach click event listener to a button for saving the canvas
   document.getElementById('save-button').addEventListener('click', saveCanvasAsImage);
 });
+
