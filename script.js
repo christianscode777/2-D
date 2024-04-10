@@ -11,6 +11,7 @@ document.addEventListener('DOMContentLoaded', function() {
       drawingApp.style.opacity = '1';
     }, 100);
   });
+
   // Set up Paper.js on the canvas element
   paper.setup('drawing-canvas');
 
@@ -117,5 +118,30 @@ document.addEventListener('DOMContentLoaded', function() {
 
   // Attach click event listener to a button for saving the canvas
   document.getElementById('save-button').addEventListener('click', saveCanvasAsImage);
+
+  // Function to add canvas to the dock
+  function addCanvasToDock() {
+    const drawingCanvas = document.getElementById('drawing-canvas');
+    const canvasDock = document.getElementById('canvas-dock');
+
+    const clonedCanvas = drawingCanvas.cloneNode(true);
+    clonedCanvas.addEventListener('click', function() {
+      switchCanvas(this);
+    });
+
+    canvasDock.appendChild(clonedCanvas); // No hiding anymore
+  }
+
+  function switchCanvas(canvas) {
+    const currentActive = document.querySelector('#canvas-dock canvas.active');
+    if (currentActive) {
+      currentActive.classList.remove('active'); // Minimize previous active canvas
+    }
+
+    canvas.classList.add('active'); // Make selected canvas active
+  }
+
+  // Event listener for "Add Canvas" button
+  document.getElementById('add-canvas-button').addEventListener('click', addCanvasToDock);
 });
 
